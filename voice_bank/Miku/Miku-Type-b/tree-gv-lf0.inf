@@ -1,0 +1,22 @@
+QS Utt_Len_Br=1 { "*/K:1+*" }
+QS Utt_Len_Br=4 { "*/K:4+*" }
+QS Utt_Len_Acc<=5 { "*+1-*","*+2-*","*+3-*","*+4-*","*+5-*" }
+QS Utt_Len_Acc<=9 { "*+?-*" }
+QS Utt_Len_Mora=18 { "*-18" }
+QS Utt_Len_Mora=46 { "*-46" }
+QS Utt_Len_Mora=50 { "*-50" }
+QS Utt_Len_Mora<=51 { "*-?","*-1?","*-2?","*-3?","*-4?","*-50","*-51" }
+
+{*}[2]
+{
+   0 Utt_Len_Acc<=9                                     -2         -1    
+  -1 Utt_Len_Acc<=5                                     -5         -3    
+  -2 Utt_Len_Mora<=51                                    "gv_lf0_1"      -4    
+  -3 Utt_Len_Mora=18                                    -7          "gv_lf0_2" 
+  -4 Utt_Len_Br=4                                       -6          "gv_lf0_3" 
+  -5 Utt_Len_Br=4                                        "gv_lf0_5"       "gv_lf0_4" 
+  -6 Utt_Len_Mora=50                                    -8          "gv_lf0_6" 
+  -7 Utt_Len_Br=1                                        "gv_lf0_8"       "gv_lf0_7" 
+  -8 Utt_Len_Mora=46                                    "gv_lf0_10"       "gv_lf0_9" 
+}
+
